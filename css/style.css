@@ -1,0 +1,1117 @@
+@font-face {
+  font-family: "basis-grotesque-bold"; /*The name you choose goes here*/
+  src: url(../fonts/basis-grotesque-bold.ttf);
+}
+
+@font-face {
+  font-family: "basis-grotesque-medium"; /*The name you choose goes here*/
+  src: url(../fonts/basis-grotesque-medium.ttf);
+}
+
+@font-face {
+  font-family: "Airbnb Cereal App Book";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/AirbnbCerealBook.woff);
+}
+
+@font-face {
+  font-family: "Airbnb Cereal App Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/AirbnbCerealMedium.woff);
+}
+
+@font-face {
+  font-family: "Airbnb Cereal App Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/AirbnbCerealBold.woff);
+}
+
+@font-face {
+  font-family: "Airbnb Cereal App Extra Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/AirbnbCerealExtraBold.woff);
+}
+
+/* GLOBALES */
+:root {
+  /* Colors */
+  --mainBg: #f2f2f2;
+  --headerTitles: h#505050;
+  --textBlack: #000000;
+  --menuBtn: ##505050;
+  --paragraph: #656565;
+  --cardBg: #ffffff;
+  --complementary: #ff512a;
+
+  /* Fonts */
+  --basisBold: "basis-grotesque-bold", sans-serif;
+  --basisMedium: "basis-grotesque-medium", sans-serif;
+  --airbnbMedium: "Airbnb Cereal App Medium", sans-serif;
+  --airbnbBold: "Airbnb Cereal App Bold", sans-serif;
+  --airbnbExtraBold: "Airbnb Cereal App Extra Bold", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: var(--mainBg);
+  user-select: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* INDEX */
+.header {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  background: #ffffff;
+}
+
+.header p {
+  position: absolute;
+  left: 24px;
+  top: 23px;
+
+  font-family: var(--basisMedium);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+
+  color: var(--menuBtn);
+}
+
+.header img {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  left: 300px;
+  top: 15px;
+}
+
+.topPicks {
+  position: relative;
+  height: auto;
+}
+
+.topPicks h2 {
+  position: relative;
+  left: 24px;
+  top: 16px;
+  margin-bottom: 7px;
+
+  font-family: var(--basisBold);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: #000000;
+}
+
+.pickScroll {
+  width: auto;
+  height: 250px;
+  display: flex;
+  overflow-y: hidden;
+  align-items: center;
+  overflow-x: scroll;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.pickScroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.pickScroll__pick {
+  position: relative;
+  min-width: 330px;
+  min-height: 223px;
+  margin-left: 10px;
+
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.pickScroll__pick h1 {
+  position: relative;
+  width: 300px;
+  height: 60px;
+  top: 15px;
+
+  font-family: var(--basisBold);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+
+  color: var(--textBlack);
+}
+
+.pickScroll__pick p {
+  position: relative;
+  width: 200px;
+  height: 32px;
+  left: 33px;
+
+  font-family: var(--airbnbMedium);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+
+  color: var(--paragraph);
+}
+
+.pickScroll__buttons {
+  position: relative;
+  min-width: 302px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.pickScroll__buttons a {
+  position: relative;
+  min-width: 120px;
+  min-height: 27px;
+
+  background-color: #ff512a;
+  border-radius: 10px;
+
+  font-family: var(--airbnbMedium);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fdfdfd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.pickScroll__buttons--first {
+  margin-right: 34px;
+}
+
+.recommendations {
+  position: relative;
+  left: 24px;
+  top: 0px;
+
+  font-family: var(--basisBold);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--textBlack);
+}
+
+.filters {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.getRecom {
+  position: relative;
+  width: 120px;
+  height: 130px;
+
+  background: #ffffff;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.getRecom img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  left: 30px;
+  top: 16px;
+}
+
+.getRecom h2 {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+
+  top: 65px;
+
+  margin-top: 30px;
+  font-family: var(--basisMedium);
+  font-size: 21px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.mainFooter {
+  position: relative;
+  width: 143px;
+  height: 34px;
+  text-align: center;
+  margin: 40px auto 0px auto;
+}
+
+/* GENRE Page */
+.filterHeader {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.filterHeader a {
+  position: relative;
+  height: 13px;
+
+  font-family: var(--basisMedium);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+
+  color: var(--menuBtn);
+}
+
+.filterHeader h2 {
+  position: relative;
+  width: 120px;
+  height: 34px;
+  top: 10px;
+
+  font-family: var(--basisBold);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+
+  color: var(--textBlack);
+}
+
+.filterHeader img {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.genreMain {
+  width: 100%;
+  position: relative;
+}
+
+.genreMain h2 {
+  position: relative;
+  width: 143px;
+  height: 34px;
+  left: 24px;
+  top: 16px;
+
+  font-family: var(--basisBold);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: var(--textBlack);
+}
+
+.genreMain__btns {
+  position: relative;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  top: 26px;
+  column-gap: 55px;
+  margin-bottom: 60px;
+  row-gap: 20px;
+
+  justify-items: center;
+}
+
+.genreMain__btns button {
+  position: relative;
+  width: 120px;
+  height: 60px;
+
+  background: #ffffff;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  border-color: transparent;
+
+  font-family: var(--basisBold);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 29px;
+  color: var(--textBlack);
+}
+
+/* OCCASION PAGE */
+.occasionMain {
+  width: 100%;
+  position: relative;
+  margin-bottom: 180px;
+}
+
+.occasionMain h2 {
+  position: relative;
+  width: 243px;
+  height: 34px;
+  left: 24px;
+  top: 16px;
+
+  font-family: var(--basisBold);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: var(--textBlack);
+}
+
+.occasionMain__btns {
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  top: 26px;
+
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.occasionMain__btns button {
+  position: relative;
+  width: 300px;
+  height: 60px;
+
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  border-color: transparent;
+
+  font-family: var(--basisBold);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 29px;
+}
+
+/* RELEASE PAGE*/
+.extended-width {
+  text-align: center;
+  margin-top: -5px;
+}
+
+.releaseMain  {
+  width: 100%;
+  position: relative;
+  margin-bottom: 180px;
+}
+
+.releaseMain h2 {
+  position: relative;
+  width: 240px;
+  height: 34px;
+  left: 24px;
+  top: 16px;
+
+  font-family: var(--basisBold);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: var(--textBlack);
+}
+
+.releaseMain__btns {
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  top: 16px;
+
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.releaseMain__btns button {
+  position: relative;
+  width: 300px;
+  height: 60px;
+
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  border-color: transparent;
+
+  font-family: var(--basisBold);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 29px;
+}
+
+/* RATING PAGE */
+.ratingMain {
+  width: 100%;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.ratingMain h2 {
+  position: relative;
+  width: 240px;
+  height: 34px;
+  left: 24px;
+  top: 16px;
+
+  font-family: var(--basisBold);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: var(--textBlack);
+}
+
+.ratingMain__btns {
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  top: 16px;
+
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.ratingMain__btns button {
+  position: relative;
+  width: 300px;
+  height: 60px;
+
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  border-color: transparent;
+
+  font-family: var(--basisBold);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 29px;
+}
+
+/* RESULTS */
+.result {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto auto 60px auto;
+  text-align: center;
+}
+
+.result__img {
+  position: relative;
+  margin: 10px auto 0px auto;
+  width: 190px;
+  height: 290px;
+  border-radius: 10px;
+}
+
+.result__card {
+  position: relative;
+  width: 375px;
+  height: 360px;
+  margin: 20px auto 0px auto;
+  background: #ffffff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.result__title {
+  position: relative;
+  width: 337px;
+  height: 53px;
+  left: 20px;
+  top: 5px;
+
+  font-family: var(--basisBold);
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+
+  color: var(--textBlack);
+}
+
+.result__director,
+.result__genre,
+.result__duration,
+.result__rating,
+.result__release {
+  position: relative;
+  left: 25px;
+  width: 300px;
+  height: 30px;
+  margin-top: 15px;
+
+  font-family: var(--basisMedium);
+  font-size: 18px;
+  line-height: 25px;
+  text-align: left;
+
+  color: var(--paragraph);
+}
+
+.result__links {
+  display: flex;
+  min-width: 100%;
+  min-height: 50px;
+  justify-content: space-evenly;
+  margin-top: -40px;
+}
+
+.result__btn {
+  position: relative;
+  display: inline-block;
+  min-width: 150px;
+  min-height: 30px;
+  margin-top: 26px;
+
+  background: var(--complementary);
+  border-radius: 10px;
+  text-decoration: none;
+  line-height: 30px;
+
+  font-family: var(--airbnbBold);
+  font-size: 14px;
+  text-align: center;
+  color: #fdfdfd;
+}
+
+.result__another {
+  position: relative;
+  width: 300px;
+  height: 27px;
+  margin: 36px auto 0px auto;
+
+  background: var(--complementary);
+  border-radius: 10px;
+  border-color: transparent;
+
+  font-family: var(--airbnbBold);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fdfdfd;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 414px) {
+  /* OCCASION PAGE */
+  .occasionMain {
+    margin-bottom: 100px;
+  }
+
+  /* RESULTS */
+  .result__another {
+    width: 340px;
+    height: 28px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* INDEX */
+  .header p {
+    font-size: 14px;
+  }
+
+  .header img {
+    left: 650px;
+  }
+
+  .getRecom {
+    width: 250px;
+    height: 170px;
+  }
+
+  .getRecom img {
+    width: 80px;
+    height: 80px;
+    left: 81px;
+    top: 20px;
+  }
+
+  .getRecom h2 {
+    top: 90px;
+    font-size: 24px;
+  }
+
+  .filterHeader h2 {
+    font-size: 21px;
+    width: 200px;
+  }
+  /* GENRE PAGE */
+  .genreMain__btns button {
+    width: 150px;
+    height: 90px;
+
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+
+    font-size: 21px;
+  }
+
+  /* OCCASION PAGE */
+  .occasionMain__btns {
+    row-gap: 30px;
+    top: 46px;
+  }
+
+  .occasionMain__btns button {
+    width: 500px;
+    height: 100px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  /*RELEASE PAGE */
+  .releaseMain__btns {
+    row-gap: 30px;
+    top: 46px;
+    margin-bottom: 100px;
+  }
+
+  .releaseMain__btns button {
+    width: 500px;
+    height: 100px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  /*RATING PAGE */
+  .ratingMain__btns {
+    row-gap: 30px;
+    top: 46px;
+    margin-bottom: 100px;
+  }
+
+  .ratingMain__btns button {
+    width: 500px;
+    height: 100px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  /* RESULTS */
+  .result {
+      margin-bottom: 100px;
+  }
+  .result__img {
+    margin-top: 20px;
+    width: 270px;
+    height: 390px;
+  }
+
+  .result__card {
+    position: relative;
+    width: 650px;
+    height: 430px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .result__title {
+    width: 650px;
+    height: 75px;
+    top: 25px;
+
+    font-size: 32px;
+  }
+
+  .result__director,
+  .result__genre,
+  .result__duration,
+  .result__rating,
+  .result__release {
+    left: 30px;
+
+    font-size: 21px;
+  }
+
+  .result__links {
+    display: flex;
+    min-width: 100%;
+    min-height: 60px;
+    justify-content: space-evenly;
+    margin-top: -30px;
+  }
+
+  .result__btn {
+    min-width: 200px;
+    min-height: 40px;
+
+    line-height: 40px;
+
+    font-size: 18px;
+  }
+
+  .result__another {
+    width: 650px;
+    height: 37px;
+
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* INDEX */
+  .header img {
+    left: 951px;
+  }
+  .pickScroll__pick {
+    min-width: 365px;
+    min-height: 230px;
+  }
+  .filters {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  /* GENRE PAGE */
+  .filterHeader {
+    height: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .filterHeader a {
+    height: 20px;
+    font-size: 18px;
+  }
+
+  .filterHeader h2 {
+    width: 200px;
+    height: 44px;
+
+    font-size: 24px;
+  }
+
+  .filterHeader img {
+    width: 80px;
+    height: 80px;
+
+  }
+
+  .genreMain h2 {
+    width: 153px;
+    height: 34px;
+    left: 34px;
+    top: 26px;
+
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .genreMain__btns {
+    margin-bottom: 120px;
+    top: 36px;
+    row-gap: 30px;
+  }
+  .genreMain__btns button {
+    width: 250px;
+    height: 190px;
+
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+
+    font-size: 36px;
+  }
+
+  /* OCCASION PGE */
+  .occasionMain {
+    margin-bottom: 300px;
+  }
+
+  .occasionMain__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 50px;
+    top: 36px;
+  }
+
+  .occasionMain__btns button {
+    width: 350px;
+    height: 100px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  /* RELEASE PAGE */
+  .releaseMain {
+    margin-bottom: 160px;
+  }
+  .releaseMain__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 50px;
+    top: 36px;
+  }
+
+  .releaseMain__btns button {
+    width: 350px;
+    height: 100px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  /* RATING PAGE */
+  .ratingMain {
+    margin-bottom: 160px;
+  }
+
+  .ratingMain__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 50px;
+    top: 36px;
+  }
+
+  .ratingMain__btns button {
+    width: 350px;
+    height: 100px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  /* RESULTS */
+  .result__img {
+    margin-top: 30px;
+    width: 370px;
+    height: 490px;
+  }
+
+  .result__card {
+    width: 850px;
+    height: 460px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .result__title {
+    width: 850px;
+    height: 75px;
+    top: 27px;
+  }
+
+  .result__director,
+  .result__genre,
+  .result__duration,
+  .result__rating,
+  .result__release {
+    left: 30px;
+    width: 500px;
+
+    font-size: 28px;
+  }
+
+  .result__btn {
+    width: 300px;
+
+    font-size: 21px;
+  }
+
+  .result__another {
+    width: 850px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .filterHeader h2 {
+    font-size: 28px;
+    width: 300px;
+  }
+  /* genre page */
+  .genreMain__btns {
+    width: 90%;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    margin-bottom: 150px;
+    top: 46px;
+    row-gap: 40px;
+  }
+
+  .genreMain__btns button {
+    width: 200px;
+    height: 140px;
+
+    font-size: 32px;
+  }
+
+  /* OCCASION PAGE*/
+  .occasionMain__btns button {
+    width: 450px;
+    height: 100px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    font-size: 28px;
+  }
+
+  /* RELEASE PAGE */
+  .releaseMain__btns button {
+    width: 450px;
+    height: 100px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    font-size: 28px;
+  }
+
+  /* RATING PAGE */
+  .ratingMain__btns button {
+    width: 450px;
+    height: 100px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    font-size: 28px;
+  }
+
+  /* RESULTS */
+  .result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 380px;
+    top: 100px;
+  }
+
+  .result__img {
+    width: 360px;
+    height: 480px;
+  }
+
+  .result__card {
+    width: 490px;
+    height: 397px;
+    margin-top: 50px;
+  }
+
+  .result__title {
+    width: 490px;
+    height: 57.46px;
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  .result__director,
+  .result__genre,
+  .result__duration,
+  .result__rating,
+  .result__release {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .result__btn {
+    position: relative;
+    width: 35px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .result__another {
+    width: 490px;
+    height: 37px;
+
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header img {
+    left: 1397px;
+  }
+  .pickScroll__pick {
+    min-width: 432px;
+    min-height: 296px;
+  }
+
+  .pickScroll__pick h1 {
+    width: 432px;
+  }
+
+  .pickScroll__pick p {
+    margin-top: 25px;
+  }
+
+  .pickScroll__buttons {
+    min-width: 423px;
+    margin-top: 30px;
+  }
+
+  .pickScroll {
+    height: 350px;
+    overflow-x: scroll;
+  }
+  .filters {
+    display: flex;
+    margin-top: 50px;
+  }
+}
